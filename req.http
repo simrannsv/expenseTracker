@@ -1,0 +1,22 @@
+POST http://localhost:4545/expense-api/addExpense
+Content-Type: application/json
+
+{
+  "amount":5000,
+  "item":"jeans",
+   "category":"Shopping"
+}
+###
+GET http://localhost:4545/expense-api/readexpenses
+
+###
+PUT http://localhost:4545/expense-api/updateExpenses/69f8b8ce8e24bc5b844d038f
+Content-Type: application/json
+
+{
+  "amount":6000,
+   "item":"gown",
+   "category":"shopping"
+}
+###
+DELETE http://localhost:4545/expense-api/deleteExpenses/69f8b8ce8e24bc5b844d038f
