@@ -1,18 +1,31 @@
-import { Schema, model } from "mongoose";
-const expenseSchema = new Schema(
-  {
-    expense: {
-      type: Number,
+import { model,Schema } from "mongoose";
+const expenseMod=new Schema(
+    {
+        userId: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: false
     },
-    exepenseCategory: {
-      type: String,
-      required: [true, "category type is required fro better expense tracking"],
+        //expense(amount,category)
+        amount:
+        {
+            type:Number,
+            required:[true,"Kindly add amount,to add expense"]
+        },
+        item:
+        {
+            type:String,
+
+        },
+        category:{
+            type:String,
+            required:[true,"Kindly add a category"]
+        }
+
     },
-  },
-  {
-    timestamps: true,
-    versionKey: false,
-    strict: "throw",
-  },
+    {
+        timestamps:true
+    }
 );
-export const expenseModel = model("expense", expenseSchema);
+
+export const expenseModel=model("expense",expenseMod)
