@@ -1,0 +1,35 @@
+###register for user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "Name":"user2",
+  "Mob_num":"1234567890",
+  "email":"user2@gmail.com",
+  "password":"user2",
+  "profileImageUrl":""
+  
+}
+
+
+###user login
+POST http://localhost:4000/user-api/login
+Content-type: application/json
+
+{
+  "email":"user2@gmail.com",
+  "password":"user2"
+}
+
+###user logout
+GET http://localhost:4000/user-api/logout
+###user details
+GET http://localhost:4000/user-api/user
+
+###income
+POST http://localhost:4000/income-api/income
+Content-Type: application/json
+
+{
+    "income":30000
+}
