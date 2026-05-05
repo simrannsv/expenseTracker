@@ -1,27 +1,19 @@
 import jwt from "jsonwebtoken"
-const {verify}=jwt;
-import { config } from "dotenv";
-config();
+import { config } from "dotenv"
+config()
 
-export const verifytoken=()=>{
-    return(req,res,next)=>{
-    
-    try{
-        //token verification logic
-    const token=req.cookies?.token
-    // if req from unauthorized user
-    if(!token){
-        return res.status(401).json({message:"plz login"})
+export const verifyToken = (req, res, next) => {
+  console.log("verifyToken hit")
+  console.log("auth header:", req.headers.authorization)
+  try {
+    const token = req.headers.authorization?.split(' ')[1]
+    if (!token) {
+      return res.status(401).json({ message: "Please login" })
     }
-    
-        // if token is existed
-    const decodedtoken=verify(token, process.env.SECRET_KEY);
-    console.log(decodedtoken)
-    req.user=decodedtoken
-    //call next
-    next();
-    }catch(err){
-        res.status(401).json({message:"session expired..plz login again"})
-    }
-}
+    const decodedToken = jwt.verify(token, process.env.SECRET_KEY)
+    req.user = decodedToken
+    next()
+  } catch (err) {
+    res.status(401).json({ message: "Session expired, please login again" })
+  }
 }
