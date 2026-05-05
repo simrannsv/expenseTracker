@@ -1,0 +1,23 @@
+POST http://localhost:4545/expense-api/addExpense
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Zjk3NmI5Y2IwODQ5ZTcwZTQ1MzkwOCIsImVtYWlsIjoidXNlM0BnbWFpbC5jb20iLCJOYW1lIjoidXNlcjMiLCJpYXQiOjE3Nzc5NTY1NzksImV4cCI6MTc3Nzk2MDE3OX0.0ATfgfdJkehImyP7sVtuoqAr7vufmJXCv-fgmUQ7S98
+
+{
+  "amount":5000,
+  "item":"jeans",
+   "category":"Shopping"
+}
+###
+GET http://localhost:4545/expense-api/readexpenses
+
+###
+PUT http://localhost:4545/expense-api/updateExpenses/69f97548139048892a04e519
+Content-Type: application/json
+
+{
+  "amount":6000,
+   "item":"gown",
+   "category":"shopping"
+}
+###
+DELETE http://localhost:4545/expense-api/deleteExpenses/69f8b8ce8e24bc5b844d038f
