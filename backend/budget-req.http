@@ -1,0 +1,20 @@
+##to set /insert the limit
+POST http://localhost:4545/budget-api/addlimit
+Content-Type: application/json
+
+{
+    "category":"Transport",
+    "limit" :5000
+}
+
+###
+GET http://localhost:4545/budget-api/checklimit
+
+###
+PUT http://localhost:4545/budget-api/editlimit/69f98d7f46796e84385ee157
+Content-Type: application/json
+
+{
+    "category":"Shopping",
+    "limit":4000
+}
