@@ -1,0 +1,28 @@
+
+POST http://localhost:4545/expense-api/addExpense
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3Nzc5NzA4MjEsImV4cCI6MTc3Nzk3NDQyMX0.-tLszJMthT02cYthxJO9QyDSlXMM1uCAiD3yl-dVO2s
+
+{
+  "amount":5000,
+  "item":"jeans",
+   "category":"Shopping"
+}
+###
+GET http://localhost:4545/expense-api/readexpenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3Nzc5NzA4MjEsImV4cCI6MTc3Nzk3NDQyMX0.-tLszJMthT02cYthxJO9QyDSlXMM1uCAiD3yl-dVO2s
+
+
+###
+PUT http://localhost:4545/expense-api/updateExpense/69f9af848e17038b94f34257
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3Nzc5NzA4MjEsImV4cCI6MTc3Nzk3NDQyMX0.-tLszJMthT02cYthxJO9QyDSlXMM1uCAiD3yl-dVO2s
+
+{
+  "amount":6000,
+   "item":"gown",
+   "category":"shopping"
+}
+###
+DELETE http://localhost:4545/expense-api/deleteExpense/69f9b14aa73e161ec59ac330
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3Nzc5NzA4MjEsImV4cCI6MTc3Nzk3NDQyMX0.-tLszJMthT02cYthxJO9QyDSlXMM1uCAiD3yl-dVO2s
