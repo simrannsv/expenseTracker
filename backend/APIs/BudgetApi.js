@@ -1,12 +1,14 @@
 import exp from "express"
 import { BudgetModel } from "../Models/BudgetModel.js"
+import { verifyToken } from "../Middlewares/verifyToken.js"
 export const budApp=exp.Router()
 
 let budgets=[]
-budApp.post('/addlimit',async(req,res)=>{
+budApp.post('/addlimit',verifyToken,async(req,res)=>{
     try{
     const newBudget=new BudgetModel({
-        ...req.body
+        ...req.body,
+        userId: req.user.id 
     })
     budgets.push(newBudget)
     await newBudget.save()
@@ -21,11 +23,11 @@ catch(err)
 })
 
 
-budApp.get('/checklimit',async(req,res)=>{
+budApp.get('/checklimit',verifyToken,async(req,res)=>{
     res.json({message:"Limits",payload:budgets})
 })
 
-budApp.put('/editlimit/:id',async(req,res)=>
+budApp.put('/editlimit/:id',verifyToken,async(req,res)=>
 {
     const updateBudget=await BudgetModel.findByIdAndUpdate(
         req.params.id,
