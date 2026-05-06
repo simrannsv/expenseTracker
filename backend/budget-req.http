@@ -1,6 +1,6 @@
-##to set /insert the limit
 POST http://localhost:4545/budget-api/addlimit
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3NzgwMzkzNjksImV4cCI6MTc3ODA0Mjk2OX0.FomhHMpdGP1kn6xwWMdDAO6Koy3UKDCzLQfpe9J2QVA
 
 {
     "category":"Transport",
@@ -9,10 +9,13 @@ Content-Type: application/json
 
 ###
 GET http://localhost:4545/budget-api/checklimit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3NzgwMzkzNjksImV4cCI6MTc3ODA0Mjk2OX0.FomhHMpdGP1kn6xwWMdDAO6Koy3UKDCzLQfpe9J2QVA
+
 
 ###
 PUT http://localhost:4545/budget-api/editlimit/69f98d7f46796e84385ee157
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3NzgwMzkzNjksImV4cCI6MTc3ODA0Mjk2OX0.FomhHMpdGP1kn6xwWMdDAO6Koy3UKDCzLQfpe9J2QVA
 
 {
     "category":"Shopping",
