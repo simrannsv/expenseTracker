@@ -21,3 +21,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1N
     "category":"Shopping",
     "limit":4000
 }
+
+
+###
+DELETE http://localhost:4545/budget-api/deletelimit/69f98d7f46796e84385ee157
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZjlhMmU1NDNiOWNhNzljMTAyMGViNCIsImVtYWlsIjoidXNlNEBnbWFpbC5jb20iLCJOYW1lIjoidXNlcjQiLCJpYXQiOjE3NzgwMzkzNjksImV4cCI6MTc3ODA0Mjk2OX0.FomhHMpdGP1kn6xwWMdDAO6Koy3UKDCzLQfpe9J2QVA
