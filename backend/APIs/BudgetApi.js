@@ -41,5 +41,19 @@ budApp.put('/editlimit/:id',verifyToken,async(req,res)=>
     res.json({message:"Updated Limit",payload:updateBudget})
 })
 
+budApp.delete('/deletelimit/:id', verifyToken, async (req, res) => {
+  try {
+    const deletedExpense = await BudgetModel.findByIdAndDelete(
+       { _id: req.params.id, userId: req.user.id }
+    )
+    if (!deletedExpense) {
+      return res.json({ message: "Limit not found" })
+    }
+    return res.json({ message: "Limit deleted", payload: deletedExpense })
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
+
 
 
